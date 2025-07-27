@@ -1,4 +1,5 @@
 import NavBar from "../components/NavBar"
+import { Link } from "react-router-dom"
 
 function About() {
     return (

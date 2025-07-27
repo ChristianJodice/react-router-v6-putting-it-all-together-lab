@@ -1,3 +1,18 @@
+.navbar {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
 .navbar > a{
     display: inline-block;
     box-sizing: border-box;
@@ -10,8 +25,21 @@
     font-size: min(10vw, 15px) ;
     color: black;
 }
-  
+
 a.active {
     background: black;
     color: white;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .navbar a {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
 }
